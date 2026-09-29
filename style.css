@@ -1,0 +1,111 @@
+:root {
+  --bg: #f7f7fb;
+  --card: #ffffff;
+  --text: #1c1b22;
+  --muted: #5e5c6b;
+  --line: #e4e2ee;
+  --accent: #5b4cf5;
+  --accent-soft: #eeebff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121118;
+    --card: #1b1a23;
+    --text: #ecebf3;
+    --muted: #a7a5b6;
+    --line: #2d2b38;
+    --accent: #a99eff;
+    --accent-soft: #2a2645;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 48px 16px 64px;
+}
+
+a { color: var(--accent); }
+
+h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 8px; }
+h2 { font-size: 1.2rem; margin: 36px 0 8px; }
+
+.muted { color: var(--muted); }
+
+.back {
+  display: inline-block;
+  margin-bottom: 24px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.card {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 16px;
+  margin-top: 16px;
+}
+
+.card img {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  flex-shrink: 0;
+}
+
+.card h2 { margin: 0; font-size: 1.1rem; }
+.card p { margin: 2px 0 8px; }
+
+.links { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.links a {
+  background: var(--accent-soft);
+  border-radius: 999px;
+  padding: 4px 14px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  overflow: hidden;
+  font-size: 0.95rem;
+}
+
+th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+tr:last-child td { border-bottom: none; }
+th { background: var(--accent-soft); }
+
+.table-wrap { overflow-x: auto; }
+
+footer {
+  margin-top: 48px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  font-size: 0.9rem;
+}
